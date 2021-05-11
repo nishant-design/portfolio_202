@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Home</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body onload="startTime()">
+    <div class="dateAndTime">
+        <div id="date"></div>
+        <div class="dateTimeDivider"></div>
+        <div id="time"></div>
+    </div>
+
+    <main id="main">
+        <div class="homeContainer">
+            <div class="homeInfo">
+                <a id="about" class="homeLink" href="./about.html"> <h1>ABOUT<span>(<span class="aboutType"></span>)</span></h1> </a>
+                <a id="work" class="homeLink" href="#"> <h1>WORK<span>(<span class="workType"></span>)</span></h1> </a>
+                <a id="skill" class="homeLink" href="#"> <h1>SKILL<span>(<span class="skillType"></span>)</span></h1> </a>
+            </div>
+
+            <div class="image"></div>
+            <!-- <canvas id="canvas"></canvas> -->
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script> <!--threeJS-->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script> <!--vanta-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> <!--greensock-->
+    <script src="./js/autotyper.min.js"></script>
+
+    <script src="./js/home.js"></script> <!--local js-->
+</body>
+</html>

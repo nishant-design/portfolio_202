@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --yellow : #dbc608;
+    --brown : #cc7e5f;
+}
+
+body{
+    background-color: #000000;
+    color: white;
+}
+
+/* .row{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1em;
+} */
+
+/* DATE AND TIME */
+.dateAndTime{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 1.4em;
+    display: flex;
+    z-index: 100;
+}
+
+.dateTimeDivider{
+    height: 24px;
+    width: 2px;
+    background-color: var(--yellow) ;
+    margin: 0 10px;
+}
+
+
+/* MAIN CONTAINER CONTAING ALL THE CONTENT */
+.homeContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10vh;
+}
+
+.homeInfo{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 2.6em;
+    /* background-color: aquamarine; */
+}
+
+h1 span{
+    color: var(--yellow);
+}
+
+.homeLink{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.aboutType,
+.workType,
+.skillType{
+    color: var(--brown);
+    font-size: 0.8em;
+}
+
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+  
+.aboutType,
+.workType,
+.skillType{
+    display: inline-block;
+    margin-right: 10px;
+    border-right: 4px solid #a3a3a3;
+    -webkit-animation: blink-caret 0.5s step-end infinite alternate;
+    animation: blink-caret 0.5s step-end infinite alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.frontend{
+    writing-mode:vertical-lr;
+    font-size: 2.4em;
+    letter-spacing: 4px;
+    /* background-color: bisque; */
+    padding: 0.6em;
+}
+
+.image{
+    width: 100%;
+    flex: 0.9;
+    height: 50px;
+    /* background-color: aqua; */
+
+}

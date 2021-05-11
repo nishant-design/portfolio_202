@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --yellow : #dbc608;
+    --brown : #cc7e5f;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    overflow: hidden;
+}
+
+/* DATE AND TIME */
+.dateAndTime{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 1.4em;
+    display: flex;
+    z-index: 100;
+}
+
+.dateTimeDivider{
+    height: 24px;
+    width: 2px;
+    background-color: var(--yellow) ;
+    margin: 0 10px;
+}
+
+/* ------------------------------------------------------------- */
+
+.work{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: center;
+}
+
+.workHeading{
+    writing-mode: vertical-lr;
+    font-size: 20vh;
+    letter-spacing: 1.8rem;
+    transform: rotate(180deg);
+    margin-left: -1rem;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0);
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.workRight{
+    flex-grow: 1;
+    padding: 1em;
+}
+
+
+/* CARDS--------------------------- */
+.cardContainer{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.2rem;
+}
+
+.card{
+    height: 60vh;
+    width: 12.5%;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #919191;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items:flex-end;
+    padding-bottom: 2em;
+}
+
+.one{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(../img/ryunosuke-kikuno-xiknZ6oclIY-unsplash.jpg);
+}
+
+.two{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(../img/scott-webb-mV9-1XjnM4Y-unsplash.jpg);
+}
+
+.three{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(../img/adrian-hartanto-nHjB5F1CMLE-unsplash.jpg);
+}
+
+.four{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(../img/henry-co--odUkx8C2gg-unsplash.jpg);
+}
+
+.five{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(../img/echo-grid-kmo52azVCzg-unsplash.jpg);
+}
+
+.six{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(../img/kendal-WwvZi-4FAa8-unsplash.jpg);
+}
+
+.seven{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url(../img/magicpattern-eHH_5rn3xnU-unsplash.jpg);
+}
+
+.eight{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url(../img/Untitled-1.jpg);
+}
+
+.verticalHeading{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Poppins', sans-serif;
+    font-size: 4vh;
+    letter-spacing: 0.5rem;
+    margin: 0 auto;
+    color: rgb(200, 200, 200);
+}
+
+.cardInfo{
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(200, 200, 200);
+    padding: 0.6rem;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    visibility: hidden;
+}
+
+.cardDetails{
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+}
+
+.cardExpand{
+    width: 80%;
+    border: 2px solid white;
+}
+
+.cardExpand .verticalHeading{
+    display: none;
+}
+
+
+
+/* ---------------------------------------------------------- */
+/* buttons */
+
+.btnWrapper{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.skillBtn{
+    position:relative;
+    padding: 1rem 0;
+    width: 30%;
+    border:2px solid  white;
+    color: white;
+    text-decoration:none;
+    transition: color 0.4s;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    transition:all 0.4s;
+}
+
+.skillBtn:after{
+    content:"";
+    border:2px solid rgba(0,0,0,0);
+    display:inline-block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    transition:all 0.4s;
+}
+
+.skillBtn:hover{
+    border:2px solid var(--yellow);
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.skillBtn:hover:after{  
+    border:2px solid var(--yellow);
+    width: calc(100% - 10px);
+    height: calc(100% + 10px); 
+}
