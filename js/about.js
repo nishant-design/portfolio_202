@@ -1,39 +1,8 @@
-// DISPLAY DATE
-let isoString = new Date().toISOString();
-const date = new Date(isoString);
-
-const options = { month: "long", day: "numeric", year: "numeric" };
-
-let dt = Intl.DateTimeFormat("en-US",options).format(date);
-
-document.getElementById("date").innerText = dt
-
-// DISPLAY TIME
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('time').innerText = h + ":" + m + ":" + s;
-    setTimeout(startTime, 500);
-
-    function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
-    }
-}
-startTime();
-
-
-
 // ANIMATION GASP
 const timeline = gsap.timeline();
 
 timeline
-    .from(".aboutHeading",{
-
+    .from(".sectionHeading",{
         y: 500,
         duration:1.5,
         ease : "power2.out"
@@ -46,28 +15,25 @@ timeline
     }, "start")
 
     .fromTo(".yellowBg",{
-
         x :1500,
-
     }, {
-
-        duration:1.5,
-        x:-1100,
+        duration:2,
+        x:-1800,
     })
 
     .fromTo(".before",{
         opacity:1
 
     },{
-        duration:0.2,
+        duration:0.1,
         opacity:0
 
-    }, "-=1.3")
+    }, "-=1.5")
 
     .to(".aboutInfo__heading",{
         duration:0.2,
         opacity:1
-    }, "label")
+    },"-=0.7", "label")
 
     .fromTo(".whiteBg",{
         x :1500,
@@ -76,4 +42,23 @@ timeline
         duration:1,
         x : 0,
         backgroundColor:"#ffffff"
-    }, "label")
+    },"-=0.7", "label")
+
+    .from(".btnWrapper", {
+        opacity:0
+    })
+
+    .to(".instagram", {
+        duration: 0.3,
+        opacity:1,
+    })
+
+    .to(".linkedin", {
+        duration: 0.3,
+        opacity:1,
+    })
+
+    .to(".github", {
+        duration: 0.3,
+        opacity:1,
+    })

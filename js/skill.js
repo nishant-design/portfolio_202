@@ -1,29 +1,95 @@
-// DISPLAY DATE
-let isoString = new Date().toISOString();
-const date = new Date(isoString);
+const designTab = document.querySelector(".design").firstElementChild;
+const developTab = document.querySelector(".develop").firstElementChild;
+const toolsTab = document.querySelector(".tools").firstElementChild;
 
-const options = { month: "long", day: "numeric", year: "numeric" };
+const designDesc = document.getElementById("design");
+const developDesc = document.getElementById("develop");
+const toolsDesc = document.getElementById("tools");
 
-let dt = Intl.DateTimeFormat("en-US",options).format(date);
+designTab.addEventListener("click", function(){
+    designTab.classList.add("activeTab");
+    designDesc.classList.add("active");
 
-document.getElementById("date").innerText = dt
+    developTab.classList.remove("activeTab");
+    developDesc.classList.remove("active");
+    toolsTab.classList.remove("activeTab");
+    toolsDesc.classList.remove("active");
+})
 
-// DISPLAY TIME
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('time').innerText = h + ":" + m + ":" + s;
-    setTimeout(startTime, 500);
+developTab.addEventListener("click", function(){
+    developTab.classList.add("activeTab");
+    developDesc.classList.add("active");
 
-    function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
-    }
-}
-startTime();
+    designTab.classList.remove("activeTab");
+    designDesc.classList.remove("active");
+    toolsTab.classList.remove("activeTab");
+    toolsDesc.classList.remove("active");
+})
 
+toolsTab.addEventListener("click", function(){
+    toolsTab.classList.add("activeTab");
+    toolsDesc.classList.add("active");
 
+    developTab.classList.remove("activeTab");
+    developDesc.classList.remove("active");
+    designTab.classList.remove("activeTab");
+    designDesc.classList.remove("active");
+});
+
+// animation
+const timeline = gsap.timeline();
+
+timeline
+    .from(".sectionHeading",{
+        y: 500,
+        duration:1.2,
+        ease : "power2.out"
+    },"start")
+
+    .from(".dateAndTime", {
+        duration : 1.4,
+        y : -50,
+        ease : "bounce.out"
+    }, "start")
+
+    .from(".design",{
+        x:-400,
+        y:-500,
+        duration:1.5
+    }, "-=0.7")
+
+    .from(".develop",{
+        y:-500,
+        duration:1.5
+    }, "-=0.7")
+
+    .from(".tools",{
+        x: 400,
+        y:-500,
+        duration:1.5
+    }, "-=0.7")
+
+    .from(".description",{
+        y:500,
+        duration:1.5,
+        ease:"bounce.out"
+    })
+
+    .from(".btnWrapper", {
+        opacity:0
+    })
+
+    .to(".instagram", {
+        duration: 0.3,
+        opacity:1,
+    })
+
+    .to(".linkedin", {
+        duration: 0.3,
+        opacity:1,
+    })
+
+    .to(".github", {
+        duration: 0.3,
+        opacity:1,
+    })

@@ -1,42 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root{
-    --yellow : #dbc608;
-    --brown : #cc7e5f;
-}
-
-body{
-    background-color: #000000;
-    color: white;
-}
-
-/* .row{
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1em;
-} */
-
-/* DATE AND TIME */
-.dateAndTime{
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    font-size: 1.4em;
-    display: flex;
-    z-index: 100;
-}
-
-.dateTimeDivider{
-    height: 24px;
-    width: 2px;
-    background-color: var(--yellow) ;
-    margin: 0 10px;
-}
-
 
 /* MAIN CONTAINER CONTAING ALL THE CONTENT */
 .homeContainer{
@@ -53,7 +14,6 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     font-size: 2.6em;
-    /* background-color: aquamarine; */
 }
 
 h1 span{
@@ -62,7 +22,7 @@ h1 span{
 
 .homeLink{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #dddddd;
 }
 
 .aboutType,

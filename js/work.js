@@ -1,31 +1,3 @@
-// DISPLAY DATE
-let isoString = new Date().toISOString();
-const date = new Date(isoString);
-
-const options = { month: "long", day: "numeric", year: "numeric" };
-
-let dt = Intl.DateTimeFormat("en-US",options).format(date);
-
-document.getElementById("date").innerText = dt
-
-// DISPLAY TIME
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('time').innerText = h + ":" + m + ":" + s;
-    setTimeout(startTime, 500);
-
-    function checkTime(i) {
-        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-        return i;
-    }
-}
-startTime();
-
 // CARD EXPAND
 
 let cards = document.querySelectorAll(".card");
@@ -103,15 +75,15 @@ amazon.addEventListener("click", function(){
 const timeline = gsap.timeline()
 
 timeline
-    .from(".workHeading",{
-        x: -500,
-        duration:1,
+    .from(".sectionHeading",{
+        y: 500,
+        duration:1.5,
         ease : "power2.out"
     }, "start")
 
     .from(".card", {
         duration: 1, 
-        y:-1000,
+        y:-1500,
         stagger:0.5
     }, "start")
 
@@ -119,47 +91,25 @@ timeline
         duration : 1.4,
         y : -50,
         ease : "bounce.out"
-        })
-    // .from(".one",{
-    //     y:-1000,
-    //     duration:1,
-    // }, "start")
+    }, "abc")
 
-    // .from(".two", {
-    //     y: 1000,
-    //     duration:1,
-    // },"two")
+    .from(".btnWrapper", {
+        opacity:0,
+        duration:1.5
+    }, "abc")
 
-    // .from(".three", {
-    //     x:1000,
-    //     duration: 1, 
-    //     delay:0.5
-    // })
+    .to(".instagram", {
+        duration: 0.3,
+        opacity:1,
+    })
 
-    // .from(".five", {
-    //     x:1000,
-    //     duration: 1, 
-    // },"two")
+    .to(".linkedin", {
+        duration: 0.3,
+        opacity:1,
+    })
 
-    // .from(".six", {
-    //     y:-1000,
-    //     duration: 1,
-    // }, "start")
-
-    // .from(".seven", {
-    //     y:-1000,
-    //     duration: 1,
-    // })
-
-    // .from(".eight", {
-    //     x:1000,
-    //     duration: 1, 
-    //     delay:0.5
-    // })
-
-    // .from(".four", {
-    //     y:-1000,
-    //     duration: 1,
-    // })
-
-console.log(timeline.duration())
+    .to(".github", {
+        duration: 0.3,
+        opacity:1,
+    })
+    
