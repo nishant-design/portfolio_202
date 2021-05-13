@@ -1,7 +1,7 @@
 // ANIMATION GASP
 const timeline = gsap.timeline();
 
-if (screen.width > 700){
+if (screen.width > 800){
     timeline
     .from(".sectionHeading",{
         y: 500,
@@ -67,7 +67,7 @@ if (screen.width > 700){
 
 // SCREEN WIDTH < 700px
 
-if (screen.width < 700){
+if (screen.width < 800){
     timeline
     .from(".sectionHeading",{
         x: -500,

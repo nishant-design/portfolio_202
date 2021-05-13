@@ -284,30 +284,20 @@ body{
 }
 
 @media(max-width:800px){
-
-    /* social icons */
-    .instagram,
-    .github,
-    .linkedin{
-        left: 95%;
+    body{
+        overflow: scroll;
     }
 
-    .instagram:hover{
-        left: 85%;
-    }
-}
-
-@media(max-width:700px){
     .dateAndTime{
         position: relative;
         top: 0%;
         right: 0%;
         z-index: 100;
         width: 12rem;
-        margin-left: auto;
-        padding: 0.4rem;
+        margin: 0 auto;
         font-family: 'poppins', sans-serif;
         font-size: 0.9rem;
+        margin-top: 1rem;
     } 
 
     /* SECTION HEADING */
@@ -319,63 +309,73 @@ body{
         background-color: transparent;
     }
 
-    /* SOCIAL ICONS */
-
-    .instagram,
-    .github,
-    .linkedin{
-        position: absolute;
-        left: 82%;
-        bottom: 2%;
-        display: flex;
-        align-items: center;
-        transition: 0.5s;
-        cursor: pointer;
-
-        font-family: 'poppins', sans-serif;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        color: #ddd;
+    .btnWrapper{
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+        width: 100%;
     }
 
-    .instagram span,
-    .github span,
-    .linkedin span{
+    .btn{
+        width: 40%;
+    }
+
+    /* CONTACT */
+    .contact{
         display: none;
     }
 
-    .linkedin{ left: 88%;}
-    .instagram{ left:94%;}
-
-    .instagram:hover{
-        left: 94%;
+    /* SOCIAL LINKS */
+    .instagram,
+    .linkedin,
+    .github{
+        display: none;
     }
 
-    .github:hover{
-        left: 82%;
+    .template{
+        display: block;
+        font-family: 'poppins', sans-serif;
+        margin-top: 5rem;
+        /* background-color: lightseagreen; */
     }
 
-    .linkedin:hover{
-        left: 88%;
+    .templateContact{
+        display: flex;
+        flex-direction: column;
+        height: 60px;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: lime; */
     }
 
-    /* CONTACTS */
-    .contact{
-        bottom: 2%;
-        left:2%;
-        transform: translateX(0%);
+    .templateContact i {
+        margin-right: 0.6rem;
+    }
+
+    .templateSocial{
+        width: 200px;
+        margin: 2rem auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* background-color: lightcoral; */
+    }
+
+    .templateSocial i{
+        background-color: white;
+        color: black;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 
 @media(max-width:480px){
-    body{
-        overflow: scroll;
-    }
-
-    .dateAndTime{
-        margin: 0 auto;
-    }
+    
 
     .sectionHeading{
         font-size: 4.4rem;
@@ -395,60 +395,7 @@ body{
         width: 80%;
         height: auto;
     }
-
-    /* CONTACT */
-    .contact{
-        display: none;
-    }
-
-    /* SOCIAL LINKS */
-    .instagram,
-    .linkedin,
-    .github{
-        display: none;
-    }
-
-    .template{
-        display: block;
-        font-family: 'poppins', sans-serif;
-        margin-top: 3rem;
-    }
-
-    .templateContact{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .templateContact i {
-        margin-right: 0.6rem;
-    }
-
-    .templateSocial{
-        width: 200px;
-        margin: 3rem auto 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .templateSocial i{
-        background-color: white;
-        color: black;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* DATE AND TIME */
-    .dateAndTime{
-        
-        padding: 0.4rem;
-        margin-top: 1rem;
-    } 
+    
 }
 
 

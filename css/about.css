@@ -95,13 +95,11 @@
     .aboutInfo__heading{
         left: 2%;
     }
-}
 
-@media(max-width:700px){
     .about{
         display: flex;
         flex-direction: column;
-        height: 85vh;
+        height: auto;
         margin-top: 1rem;
     }
 
@@ -132,8 +130,8 @@
         z-index: 5;
         opacity: 0;
     }
-    
 }
+
 
 @media(max-width:480px){
     .before{
