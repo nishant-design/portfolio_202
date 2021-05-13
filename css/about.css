@@ -101,7 +101,6 @@
     .about{
         display: flex;
         flex-direction: column;
-        /* background-color: thistle; */
         height: 85vh;
         margin-top: 1rem;
     }
@@ -141,6 +140,11 @@
         font-size: 1.4rem;
         left: 1%;
     }
+
+    .about{
+        height:auto;
+        margin-top: 1rem;
+    }
     
     .aboutInfo__heading{
         left: 2%;
@@ -149,6 +153,5 @@
 
     .aboutInfo{
         width: 100%;
-        background-color: rgb(45, 88, 84);
     }
 }
