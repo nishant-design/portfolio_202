@@ -302,15 +302,13 @@ body{
         position: relative;
         top: 0%;
         right: 0%;
-        font-size: 1.2rem;
-        display: flex;
         z-index: 100;
-        /* background-color: tomato; */
-        width: 220px;
+        width: 12rem;
         margin-left: auto;
-        justify-content: space-evenly;
         padding: 0.4rem;
-    }
+        font-family: 'poppins', sans-serif;
+        font-size: 0.9rem;
+    } 
 
     /* SECTION HEADING */
     .sectionHeading{
@@ -376,11 +374,7 @@ body{
     }
 
     .dateAndTime{
-        /* border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        border-bottom: 1px solid #ddd; */
         margin: 0 auto;
-        border-radius: 0 0 5px 5px;
     }
 
     .sectionHeading{
@@ -448,6 +442,13 @@ body{
         align-items: center;
         justify-content: center;
     }
+
+    /* DATE AND TIME */
+    .dateAndTime{
+        
+        padding: 0.4rem;
+        margin-top: 1rem;
+    } 
 }
 
 
