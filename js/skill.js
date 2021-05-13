@@ -72,7 +72,7 @@ timeline
     .from(".description",{
         y:500,
         duration:1.5,
-        ease:"bounce.out"
+        // ease:"bounce.out"
     })
 
     .from(".btnWrapper", {

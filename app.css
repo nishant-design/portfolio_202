@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 /* STYLES TO BE APPLIED THROUGHOUT */
 
 *{
@@ -15,6 +16,8 @@ body{
     background-color: rgb(0, 0, 0);
     color: #ddd;
     overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* DATE AND TIME */
@@ -47,6 +50,11 @@ body{
     transition: 0.5s;
     cursor: pointer;
     opacity: 0;
+
+    font-family: 'poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #ddd;
 }
 
 .linkedin{ bottom: 75px;}
@@ -64,15 +72,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.instagram span,
-.github span,
-.linkedin span{
-    font-family: 'poppins', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    color: #ddd;
+    font-size: 1rem;
 }
 
 .instagram:hover{
@@ -90,17 +90,15 @@ body{
 /* contact */
 .contact{
     position: absolute;
-    top: 6%;
-    right: 0%;
+    bottom: 2%;
+    left:50%;
     transform: translateX(-50%);
     display: flex;
     font-family: 'poppins', sans-serif;
-    width: 24%;
-    /* max-width: 310px; */
+    width: 310px;
     align-items: center;
     justify-content: space-between;
     font-size: 0.8rem;
-    background-color: aqua;
 }
 
 .contact i{
@@ -166,7 +164,6 @@ body{
     font-size: 20vh;
     letter-spacing: 1rem;
     transform: rotate(180deg);
-    /* margin-left: -1rem; */
     z-index: 1000;
     background-color: rgb(0, 0, 0);
     padding-left: 50px;
@@ -222,4 +219,171 @@ body{
     border:2px solid var(--yellow);
     width: calc(100% - 10px);
     height: calc(100% + 10px); 
+}
+
+/* MEDIA ON WIDTH */
+
+@media(max-width:1024px){
+    .btnWrapper{
+        width: 60%;
+    }
+
+    /* social icons */
+    .instagram,
+    .github,
+    .linkedin{
+        left: 96.5%;
+        font-size: 0.7rem;
+    }
+
+    .instagram:hover{
+        left: 88%;
+    }
+    
+    .github:hover{
+        left: 90%;
+    }
+    
+    .linkedin:hover{
+        left: 89%;
+    }
+}
+
+@media(max-width:900px){
+    /* section heading */
+    .sectionHeading{
+        padding-left: 0px;
+    }
+
+    .btnWrapper{
+        width: 70%;
+    }
+
+    /* social icons */
+    .instagram,
+    .github,
+    .linkedin{
+        left: 96%;
+    }
+
+    .instagram:hover{
+        left: 86%;
+    }
+    
+    .github:hover{
+        left: 88%;
+    }
+    
+    .linkedin:hover{
+        left: 87%;
+    }
+}
+
+@media(max-width:800px){
+
+    /* social icons */
+    .instagram,
+    .github,
+    .linkedin{
+        left: 95%;
+    }
+
+    .instagram:hover{
+        left: 85%;
+    }
+}
+
+@media(max-width:700px){
+    .dateAndTime{
+        position: relative;
+        top: 0%;
+        right: 0%;
+        font-size: 1.2rem;
+        display: flex;
+        z-index: 100;
+        /* background-color: tomato; */
+        width: 220px;
+        margin-left: auto;
+        justify-content: space-evenly;
+        padding: 0.4rem;
+    }
+
+    /* SECTION HEADING */
+    .sectionHeading{
+        writing-mode:inherit;
+        font-size: 100px;
+        letter-spacing: 1rem;
+        transform: rotate(0deg);
+        background-color: transparent;
+    }
+
+    /* SOCIAL ICONS */
+
+    .instagram,
+    .github,
+    .linkedin{
+        position: absolute;
+        left: 82%;
+        bottom: 2%;
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        cursor: pointer;
+
+        font-family: 'poppins', sans-serif;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: #ddd;
+    }
+
+    .instagram span,
+    .github span,
+    .linkedin span{
+        display: none;
+    }
+
+    .linkedin{ left: 88%;}
+    .instagram{ left:94%;}
+
+    .instagram:hover{
+        left: 94%;
+    }
+
+    .github:hover{
+        left: 82%;
+    }
+
+    .linkedin:hover{
+        left: 88%;
+    }
+
+    /* CONTACTS */
+    .contact{
+        bottom: 2%;
+        left:2%;
+        transform: translateX(0%);
+    }
+}
+
+
+@media(max-width:480px){
+    .dateAndTime{
+        margin: 0 auto;
+    }
+    .sectionHeading{
+        font-size: 4.4rem;
+        text-align: center;
+    }
+}
+
+
+/* MEDIA ON HEIGHT */
+@media(min-height:1000px) and (max-width:1050px){
+    .sectionHeading{
+        font-size: 160px;
+    }
+
+    .btnWrapper{
+        width: 80%;
+    }
 }
