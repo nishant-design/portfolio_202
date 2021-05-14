@@ -10,10 +10,6 @@
     overflow: hidden;
 }
 
-.sectionHeading{
-    letter-spacing: 2rem;
-}
-
 .workRight{
     flex-grow: 1;
     padding: 1em;
@@ -168,10 +164,6 @@
 
     .workRight{
         width: 100%;
-    }
-
-    .sectionHeading{
-        margin-left: 1.6rem;
     }
     
 

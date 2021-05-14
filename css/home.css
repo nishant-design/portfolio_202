@@ -1,11 +1,12 @@
 
 /* MAIN CONTAINER CONTAING ALL THE CONTENT */
+
 .homeContainer{
     height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10vh;
+    padding-left: 3rem;
 }
 
 .homeInfo{
@@ -14,10 +15,15 @@
     flex-direction: column;
     justify-content: space-evenly;
     font-size: 2.6em;
+    width: 58%;
 }
 
-h1 span{
+h1{display: inline-block;}
+
+.bracket{
     color: var(--yellow);
+    font-size: 5rem;
+    font-weight: 600;
 }
 
 .homeLink{
@@ -28,12 +34,13 @@ h1 span{
 .aboutType,
 .workType,
 .skillType{
-    color: var(--brown);
-    font-size: 0.8em;
+    color: #cc7e5f;
+    font-size: 3.6rem;;
+    font-weight: 400;
 }
 
 
-@keyframes blink-caret {
+@keyframes blink {
     50% {
         border-color: transparent;
     }
@@ -45,48 +52,58 @@ h1 span{
     display: inline-block;
     margin-right: 10px;
     border-right: 4px solid #a3a3a3;
-    -webkit-animation: blink-caret 0.5s step-end infinite alternate;
-    animation: blink-caret 0.5s step-end infinite alternate;
+    -webkit-animation: blink 0.5s step-end infinite alternate;
+    animation: blink 0.5s step-end infinite alternate;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.frontend{
-    writing-mode:vertical-lr;
-    font-size: 2.4em;
-    letter-spacing: 4px;
-    /* background-color: bisque; */
-    padding: 0.6em;
+.homeImg{
+    width: 40%;
 }
 
-.image{
-    width: 100%;
-    flex: 0.9;
-    height: 50px;
-    /* background-color: aqua; */
+@media(max-width:1024px){
+    .homeContainer{
+        padding-left: 2rem;
+    }
 
+    .homeInfo{
+        font-size: 2em;
+    }
+
+    .aboutType,
+    .workType,
+    .skillType{
+        font-size: 3rem;
+    }
+
+}
+
+@media(max-width:800px){
+    .homeInfo{
+        width: 100%;
+        text-align: center;
+    }
+
+    .homeImg{
+        display: none;
+    }
+}
+
+@media(max-width:480px) {
+    .homeContainer{
+        padding-left: 0;
+    }
+
+    .homeInfo{
+        font-size: 1.4em;
+    }
+
+    .bracket{
+        font-size: 3rem;
+    }
+
+    .aboutType,
+    .workType,
+    .skillType{
+        font-size: 2.4rem;
+    }
 }

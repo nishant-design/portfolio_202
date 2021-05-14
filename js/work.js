@@ -74,7 +74,8 @@ amazon.addEventListener("click", function(){
 // animation
 const timeline = gsap.timeline()
 
-timeline
+if(screen.width > 1024){
+    timeline
     .from(".sectionHeading",{
         y: 500,
         duration:1.5,
@@ -112,4 +113,77 @@ timeline
         duration: 0.3,
         opacity:1,
     })
+
+    .from(".contact",{
+        opacity:0,
+        y: 100,
+        ease: "powerOut"
+    })
+}
+
+if(screen.width < 1024 && screen.width > 800){
+    timeline
+    .from(".sectionHeading",{
+        y: 500,
+        duration:1.5,
+        ease : "power2.out"
+    }, "start")
+
+    .from(".cardLink",{
+        x: 1000,
+        stagger:0.3
+    })
+
+    .from(".dateAndTime", {
+        duration : 1.4,
+        y : -50,
+        ease : "bounce.out"
+    }, "abc")
+
+    .from(".btnWrapper", {
+        opacity:0,
+        duration:1.5
+    }, "abc")
+
+    .to(".instagram", {
+        duration: 0.3,
+        opacity:1,
+    })
+
+    .to(".linkedin", {
+        duration: 0.3,
+        opacity:1,
+    })
+
+    .to(".github", {
+        duration: 0.3,
+        opacity:1,
+    })
+
+    .from(".contact",{
+        opacity:0,
+        y: 100,
+        ease: "powerOut"
+    })
+}
     
+if(screen.width < 800){
+    timeline
+    .from(".sectionHeading",{
+        y: -800,
+        duration:1.5,
+        ease : "power2.out"
+    }, "start")
+
+    .from(".cardLink",{
+        x: 500,
+        stagger:0.3
+    },"abc")
+
+    .from(".dateAndTime", {
+        duration : 1.4,
+        y : -50,
+        ease : "bounce.out"
+    }, "abc")
+
+}

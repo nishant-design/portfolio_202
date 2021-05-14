@@ -70,7 +70,7 @@ timeline
     }, "-=0.7")
 
     .from(".description",{
-        y:500,
+        y:800,
         duration:1.5,
         // ease:"bounce.out"
     })
@@ -92,4 +92,10 @@ timeline
     .to(".github", {
         duration: 0.3,
         opacity:1,
+    })
+
+    .from(".contact",{
+        opacity:0,
+        y: 100,
+        ease: "powerOut"
     })

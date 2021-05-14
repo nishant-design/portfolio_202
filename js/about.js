@@ -63,6 +63,12 @@ if (screen.width > 800){
         duration: 0.3,
         opacity:1,
     })
+
+    .from(".contact",{
+        opacity:0,
+        y: 100,
+        ease: "powerOut"
+    })
 }
 
 // SCREEN WIDTH < 700px
@@ -70,16 +76,16 @@ if (screen.width > 800){
 if (screen.width < 800){
     timeline
     .from(".sectionHeading",{
-        x: -500,
+        y: -500,
         duration:1.5,
         ease : "power2.out"
     })
 
     .fromTo(".yellowBg",{
-        x :1500,
+        x :1000,
     }, {
         duration:2,
-        x:-1800,
+        x:-1000,
     })
 
     .fromTo(".before",{
@@ -105,28 +111,19 @@ if (screen.width < 800){
         backgroundColor:"#ddd"
     },"-=0.7", "label")
 
+    .from(".aboutInfo",{
+        opacity: 0,
+        duration:1
+    }, "-=1")
+
     .from(".btnWrapper", {
         opacity:0
     })
 
-    .to(".instagram", {
-        duration: 0.3,
-        opacity:1,
-    })
 
-    .to(".linkedin", {
-        duration: 0.3,
-        opacity:1,
+    .from(".dateAndTime", {
+        duration : 1.4,
+        y : -50,
+        ease : "bounce.out"
     })
-
-    .to(".github", {
-        duration: 0.3,
-        opacity:1,
-    })
-
-    // .from(".dateAndTime", {
-    //     duration : 1.4,
-    //     y : -50,
-    //     ease : "bounce.out"
-    // })
 }

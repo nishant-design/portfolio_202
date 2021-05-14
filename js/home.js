@@ -1,5 +1,4 @@
 
-
 // SELECT TYPING EFFECT
 let about = document.getElementById("about");
 let work = document.getElementById("work");
@@ -69,7 +68,7 @@ skill.addEventListener("mouseleave", function(){
 
 // BG ANIMATION
 VANTA.WAVES({
-    el: "#main",
+    el: "body",
     mouseControls: false,
     touchControls: false,
     gyroControls: false,

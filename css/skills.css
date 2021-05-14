@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 /* ------------------------------------------------------------- */
 
 .skills{
@@ -8,17 +8,13 @@
     align-items: center;
 }
 
-.sectionHeading{
-    letter-spacing: 2rem;
-}
-
 .skillsRight{
     flex-grow: 1;
     padding: 1em;
 }
 
 .gridWrapper{
-    width: 70%;
+    width: 71%;
     margin: 0 auto;
     display: grid;
     grid-template-areas: 
@@ -89,3 +85,26 @@
 }
 
 /* ---------------------------------------------------------- */
+
+@media(max-width:800px){
+    .skills{
+        flex-direction: column;
+    }
+
+    .gridWrapper{
+        width: 100%;
+    }
+}
+
+@media(max-width:480px) {
+    .description{
+        padding: 1.6rem 0.4rem;
+    }
+
+    .design h2,
+    .develop h2,
+    .tools h2{
+        padding: 0.6rem;
+        font-size: 1.2rem;
+    }
+}

@@ -91,8 +91,8 @@ body{
 .contact{
     position: absolute;
     bottom: 2%;
-    left:50%;
-    transform: translateX(-50%);
+    left:2%;
+    /* transform: translateX(-50%); */
     display: flex;
     font-family: 'poppins', sans-serif;
     width: 310px;
@@ -121,14 +121,14 @@ body{
     background-color: rgb(200, 200, 200);
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 12px;
-    padding: 5px 5px;
+    font-size: 10px;
+    padding: 1px 5px;
     border-radius: 6px;
     /* Position the tooltip text */
     position: absolute;
     z-index: 100;
-    bottom: -20%; /*125 default*/
-    right: -55%; /*left 50%*/
+    bottom: 125%; /*125 default*/
+    left: 50%; /*left 50%*/
     /* margin-left: -60px; */
     /* Fade in tooltip */
     opacity: 1;
@@ -139,12 +139,12 @@ body{
 .tooltip .tool_tip_text::after {
     content: "";
     position: absolute;
-    top: 25%; /*100% default*/
-    left: -17%; /* left 50% default*/
+    top: 100%; /*100% default*/
+    left: 50%; /* left 50% default*/
     /* transform:translateY(-50%); */
-    transform: rotate(90deg);
-    /* margin-left: -5px; */
-    border-width: 8px;
+    /* transform: rotate(-90deg); */
+    margin-left: -5px;
+    border-width: 5px;
     border-style: solid;
     border-color: rgb(200, 200, 200) transparent transparent transparent;
 }
@@ -167,6 +167,7 @@ body{
     z-index: 1000;
     background-color: rgb(0, 0, 0);
     padding-left: 50px;
+    margin-bottom: 1.6rem;
 }
 
 /* ---------------buttons------------------ */
@@ -211,8 +212,8 @@ body{
 
 .btn:hover{
     border:2px solid var(--yellow);
-    letter-spacing: 4px;
-    font-weight: 600;
+    letter-spacing: 5px;
+    /* font-weight: 600; */
 }
 
 .btn:hover:after{  
@@ -297,7 +298,7 @@ body{
         margin: 0 auto;
         font-family: 'poppins', sans-serif;
         font-size: 0.9rem;
-        margin-top: 1rem;
+        padding-top: 1rem;
     } 
 
     /* SECTION HEADING */
@@ -370,6 +371,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
 }
 

@@ -29,12 +29,13 @@ function startTime() {
 startTime();
 
 //copy email to clipboard
-let copyText = document.querySelector(".email");
+let emailBtn = document.querySelector(".tooltip");
+let email = "nishant.chgh@gmail.com";
 let tooltip = document.querySelector(".tool_tip_text");
 
-copyText.addEventListener("click", ()=>{
+emailBtn.addEventListener("click", ()=>{
     const pel = document.createElement('textarea');
-    pel.value = copyText.innerText;
+    pel.value = email;
     document.body.appendChild(pel);
     pel.select();
     document.execCommand('copy');
@@ -63,3 +64,21 @@ github.addEventListener("click", function(){
 linkedin.addEventListener("click", function(){
     window.open("https://www.linkedin.com/in/nishant-chugh-1b180220a/");
 });
+
+// social icon redirect (FOR MOBILE ICONS)
+const tempInstagram = document.querySelector(".tempInstagram");
+const tempGithub = document.querySelector(".tempGithub");
+const tempLinkedin = document.querySelector(".tempLinkedin");
+
+tempInstagram.addEventListener("click", function(){
+    window.open("https://www.instagram.com/_nishantchugh/");
+});
+
+tempGithub.addEventListener("click", function(){
+    window.open("https://github.com/nishant-design");
+});
+
+tempLinkedin.addEventListener("click", function(){
+    window.open("https://www.linkedin.com/in/nishant-chugh-1b180220a/");
+});
+
