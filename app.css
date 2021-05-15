@@ -313,7 +313,8 @@ body{
     .btnWrapper{
         margin-bottom: 2rem;
         margin-top: 3rem;
-        width: 100%;
+        /* background-color: brown; */
+        width: 90%;
     }
 
     .btn{
@@ -329,6 +330,10 @@ body{
     .instagram,
     .linkedin,
     .github{
+        display: none;
+    }
+
+    .tool_tip_text{
         display: none;
     }
 

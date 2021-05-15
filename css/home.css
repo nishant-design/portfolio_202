@@ -1,24 +1,34 @@
 
 /* MAIN CONTAINER CONTAING ALL THE CONTENT */
 
-.homeContainer{
+#main{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100vh;
+    width: 65%;
+    z-index: 0;
+}
+
+.homeMenu{
+    z-index: 5;
+    position: relative;
+    width: 65%;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 3rem;
-}
-
-.homeInfo{
-    height: 90%;
-    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    font-size: 2.6em;
-    width: 58%;
+    align-items: center;
+    justify-content: center;
 }
 
-h1{display: inline-block;}
+h1{
+    display: inline-block;
+    font-size: 5rem;
+}
+
+#work{
+    margin: 5rem 0;
+}
 
 .bracket{
     color: var(--yellow);
@@ -50,60 +60,65 @@ h1{display: inline-block;}
 .workType,
 .skillType{
     display: inline-block;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     border-right: 4px solid #a3a3a3;
     -webkit-animation: blink 0.5s step-end infinite alternate;
     animation: blink 0.5s step-end infinite alternate;
 }
 
 .homeImg{
-    width: 40%;
+    position: absolute;
+    height: 100vh;
+    object-fit: contain;
+    right: 5%;
+    z-index: 2;
 }
+
 
 @media(max-width:1024px){
-    .homeContainer{
-        padding-left: 2rem;
-    }
 
-    .homeInfo{
-        font-size: 2em;
-    }
-
-    .aboutType,
-    .workType,
-    .skillType{
-        font-size: 3rem;
-    }
-
-}
-
-@media(max-width:800px){
-    .homeInfo{
+    #main{
         width: 100%;
-        text-align: center;
+    }
+
+    .homeMenu{
+        width: 100%;
+    }
+
+    #work{
+        margin: 8rem 0;
     }
 
     .homeImg{
         display: none;
     }
+    
+
 }
 
-@media(max-width:480px) {
-    .homeContainer{
-        padding-left: 0;
-    }
-
-    .homeInfo{
-        font-size: 1.4em;
-    }
-
-    .bracket{
-        font-size: 3rem;
-    }
+@media(max-width:800px){
 
     .aboutType,
     .workType,
     .skillType{
-        font-size: 2.4rem;
+        display: none;
+    }
+
+    .homeMenu{
+        /* background-color: brown; */
+        height: 90vh;
+    }
+
+    
+}
+
+@media(max-width:480px){
+
+    h1{
+        font-size: 3.6rem;
+    }
+    
+    .bracket{
+        font-size: 3.6rem;
     }
 }

@@ -76,10 +76,10 @@ if (screen.width > 800){
 if (screen.width < 800){
     timeline
     .from(".sectionHeading",{
-        y: -500,
+        y: -200,
         duration:1.5,
         ease : "power2.out"
-    })
+    }, "hello")
 
     .fromTo(".yellowBg",{
         x :1000,
@@ -114,7 +114,7 @@ if (screen.width < 800){
     .from(".aboutInfo",{
         opacity: 0,
         duration:1
-    }, "-=1")
+    }, "-=0")
 
     .from(".btnWrapper", {
         opacity:0
@@ -124,6 +124,7 @@ if (screen.width < 800){
     .from(".dateAndTime", {
         duration : 1.4,
         y : -50,
+        delay:0.5,
         ease : "bounce.out"
-    })
+    }, "hello")
 }

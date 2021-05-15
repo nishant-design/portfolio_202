@@ -167,7 +167,7 @@ if(screen.width < 1024 && screen.width > 800){
     })
 }
     
-if(screen.width < 800){
+if(screen.width <= 800){
     timeline
     .from(".sectionHeading",{
         y: -800,
@@ -176,7 +176,7 @@ if(screen.width < 800){
     }, "start")
 
     .from(".cardLink",{
-        x: 500,
+        x: 800,
         stagger:0.3
     },"abc")
 

@@ -68,7 +68,7 @@ skill.addEventListener("mouseleave", function(){
 
 // BG ANIMATION
 VANTA.WAVES({
-    el: "body",
+    el: "#main",
     mouseControls: false,
     touchControls: false,
     gyroControls: false,
@@ -77,11 +77,11 @@ VANTA.WAVES({
     scale: 1.00,
     scaleMobile: 1.00,
     color: 0x0,
-    shininess: 20.00,
+    shininess: 30.00,
     waveHeight: 20.00,
     waveSpeed: 0.3,
     zoom: 1.00
-  })
+})
 
 
 //ANIMATION
