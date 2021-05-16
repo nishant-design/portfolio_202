@@ -1,6 +1,11 @@
 
 /* MAIN CONTAINER CONTAING ALL THE CONTENT */
 
+body{
+    overflow: hidden;
+    height: 100vh;
+}
+
 #main{
     position: absolute;
     top: 0;
@@ -120,6 +125,7 @@ h1:hover::before{
 
     .homeImg{
         right: -90%;
+        filter: brightness(100%);
     }
 }
 
