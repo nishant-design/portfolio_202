@@ -30,12 +30,6 @@ body{
     flex-direction: column;
 }
 
-/* .bracket{
-    color: var(--yellow);
-    font-size: 5rem;
-    font-weight: 600;
-} */
-
 .animate{
     text-decoration: none;
 }
@@ -76,12 +70,13 @@ h1:hover::before{
 
 
 .homeImg{
-    position: absolute;
+    position: fixed;
     height: 100vh;
     object-fit: contain;
     right: 5%;
     z-index: 2;
     filter: brightness(120%);
+    overflow: hidden;
 }
 
 
@@ -105,7 +100,7 @@ h1:hover::before{
 @media(max-width:800px){
 
     .homeImg{
-        right: -40%;
+        right: -60%;
     }
 
     
@@ -133,6 +128,20 @@ h1:hover::before{
 @media(max-width:380px){
 
     .homeImg{
-        right: -120%;
+        right: -100%;
+    }
+}
+
+
+/*ipad big */
+@media(min-height:900px) and (max-width: 1025px){
+    .homeImg{
+        right: -60%;
+    }
+}
+
+@media(min-height:900px) and (max-width: 800px){
+    .homeImg{
+        right: -80%;
     }
 }
