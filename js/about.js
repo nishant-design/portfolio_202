@@ -71,9 +71,9 @@ if (screen.width > 800){
     })
 }
 
-// SCREEN WIDTH < 700px
+// SCREEN WIDTH < 800px
 
-if (screen.width < 800){
+if (screen.width <= 800){
     timeline
     .from(".sectionHeading",{
         y: -200,
@@ -100,7 +100,7 @@ if (screen.width < 800){
     .to(".aboutInfo__heading",{
         duration:0.2,
         opacity:1
-    },"-=0.7", "label")
+    },"-=1.1", "label")
 
     .fromTo(".whiteBg",{
         x :1500,
@@ -109,7 +109,7 @@ if (screen.width < 800){
         duration:1,
         x : 0,
         backgroundColor:"#ddd"
-    },"-=0.7", "label")
+    },"-=1.1", "label")
 
     .from(".aboutInfo",{
         opacity: 0,
@@ -127,4 +127,8 @@ if (screen.width < 800){
         delay:0.5,
         ease : "bounce.out"
     }, "hello")
+
+    .from(".template", {
+        opacity:0
+    })
 }

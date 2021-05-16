@@ -82,10 +82,13 @@
 }
 
 @media(max-width:800px){
-    .aboutInfo{
-        width: 100%;
+    .about{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        /* background-color: cadetblue; */
     }
-
+    
     /* HEADING CONTAINER */
     .headingContainer{
         width: 100%;
@@ -96,11 +99,8 @@
         left: 2%;
     }
 
-    .about{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        margin-top: 1rem;
+    .aboutInfo{
+        width: 100%;
     }
 }
 

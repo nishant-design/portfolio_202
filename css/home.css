@@ -16,55 +16,59 @@
     width: 65%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-h1{
-    display: inline-block;
-    font-size: 5rem;
+.alignleft{
+    display: flex;
+    flex-direction: column;
 }
 
-#work{
-    margin: 5rem 0;
-}
-
-.bracket{
+/* .bracket{
     color: var(--yellow);
     font-size: 5rem;
     font-weight: 600;
-}
+} */
 
-.homeLink{
+.animate{
     text-decoration: none;
+}
+
+.workLink{
+    margin: 3rem 0;
+}
+
+h1{
+    font-size: 5rem;
     color: #dddddd;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 0.5rem;
+    transition: 0.6s linear;
 }
 
-.aboutType,
-.workType,
-.skillType{
-    color: #cc7e5f;
-    font-size: 3.6rem;;
-    font-weight: 400;
+h1:hover{
+    transform: translateX(30px);
 }
 
+#about::before{content: "ABOUT";}
+#work::before{content: "WORK";}
+#skill::before{content: "SKILL";}
 
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+h1::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--yellow);
+    width: 0;
+    overflow: hidden;
+    transition: 0.8s linear;
 }
-  
-.aboutType,
-.workType,
-.skillType{
-    display: inline-block;
-    /* margin-right: 10px; */
-    border-right: 4px solid #a3a3a3;
-    -webkit-animation: blink 0.5s step-end infinite alternate;
-    animation: blink 0.5s step-end infinite alternate;
+
+h1:hover::before{
+    width: 100%;
 }
+
 
 .homeImg{
     position: absolute;
@@ -72,25 +76,22 @@ h1{
     object-fit: contain;
     right: 5%;
     z-index: 2;
+    filter: brightness(120%);
 }
 
 
 @media(max-width:1024px){
 
     #main{
-        width: 100%;
+        width: 80%;
     }
 
     .homeMenu{
-        width: 100%;
-    }
-
-    #work{
-        margin: 8rem 0;
+        width: 80%;
     }
 
     .homeImg{
-        display: none;
+        right: -20%;
     }
     
 
@@ -98,27 +99,34 @@ h1{
 
 @media(max-width:800px){
 
-    .aboutType,
-    .workType,
-    .skillType{
-        display: none;
-    }
-
-    .homeMenu{
-        /* background-color: brown; */
-        height: 90vh;
+    .homeImg{
+        right: -40%;
     }
 
     
 }
 
-@media(max-width:480px){
+@media(max-width:600px){
+    .homeImg{
+        right: -70%;
+    }
 
     h1{
         font-size: 3.6rem;
     }
-    
-    .bracket{
-        font-size: 3.6rem;
+}
+
+@media(max-width:480px){
+
+    .homeImg{
+        right: -90%;
+    }
+}
+
+
+@media(max-width:380px){
+
+    .homeImg{
+        right: -120%;
     }
 }

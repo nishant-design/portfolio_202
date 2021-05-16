@@ -1,69 +1,69 @@
 
 // SELECT TYPING EFFECT
-let about = document.getElementById("about");
-let work = document.getElementById("work");
-let skill = document.getElementById("skill");
+// let about = document.getElementById("about");
+// let work = document.getElementById("work");
+// let skill = document.getElementById("skill");
 
-let aboutType = document.querySelector(".aboutType");
-let workType = document.querySelector(".workType");
-let skillType = document.querySelector(".skillType");
+// let aboutType = document.querySelector(".aboutType");
+// let workType = document.querySelector(".workType");
+// let skillType = document.querySelector(".skillType");
 
-// ABOUT
-let typer = new autoTyper({
-    selector: ".aboutType",
-    words: ['"select"'],
-    loop: false,
-    delay: 60000,
-    charSpeed: 150,
-});
+// // ABOUT
+// let typer = new autoTyper({
+//     selector: ".aboutType",
+//     words: ['"select"'],
+//     loop: false,
+//     delay: 60000,
+//     charSpeed: 150,
+// });
 
-about.addEventListener("mouseenter", function(){
-    typer.start();
-})
+// about.addEventListener("mouseenter", function(){
+//     typer.start();
+// })
 
-about.addEventListener("mouseleave", function(){
-    typer.stop();
-    aboutType.innerText = "";
+// about.addEventListener("mouseleave", function(){
+//     typer.stop();
+//     aboutType.innerText = "";
 
-})
+// })
 
-// WORK
-let workTyper = new autoTyper({
-    selector: ".workType",
-    words: ['"select"'],
-    loop: false,
-    delay: 60000,
-    charSpeed: 150,
-});
+// // WORK
+// let workTyper = new autoTyper({
+//     selector: ".workType",
+//     words: ['"select"'],
+//     loop: false,
+//     delay: 60000,
+//     charSpeed: 150,
+// });
 
-work.addEventListener("mouseenter", function(){
-    workTyper.start();
-})
+// work.addEventListener("mouseenter", function(){
+//     workTyper.start();
+// })
 
-work.addEventListener("mouseleave", function(){
-    workTyper.stop();
-    workType.innerText = "";
+// work.addEventListener("mouseleave", function(){
+//     workTyper.stop();
+//     workType.innerText = "";
 
-})
+// })
 
-// SKILL
-let skillTyper = new autoTyper({
-    selector: ".skillType",
-    words: ['"select"'],
-    loop: false,
-    delay: 60000,
-    charSpeed: 150,
-});
+// // SKILL
+// let skillTyper = new autoTyper({
+//     selector: ".skillType",
+//     words: ['"select"'],
+//     loop: false,
+//     delay: 60000,
+//     charSpeed: 150,
+// });
 
-skill.addEventListener("mouseenter", function(){
-    skillTyper.start();
-})
+// skill.addEventListener("mouseenter", function(){
+//     skillTyper.start();
+// })
 
-skill.addEventListener("mouseleave", function(){
-    skillTyper.stop();
-    skillType.innerText = "";
+// skill.addEventListener("mouseleave", function(){
+//     skillTyper.stop();
+//     skillType.innerText = "";
 
-})
+// })
 
 
 // BG ANIMATION
@@ -88,7 +88,7 @@ VANTA.WAVES({
 const timeline = gsap.timeline();
 
 timeline
-    .from(".homeLink", {
+    .from(".animate", {
     duration:2,
     x:-60,
     opacity : 0,
@@ -100,5 +100,5 @@ timeline
     duration : 1.4,
     y : -50,
     ease : "bounce.out"
-    })
+    },"-=1.4")
 

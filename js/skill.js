@@ -71,11 +71,16 @@ timeline
 
     .from(".description",{
         y:800,
+        opacity:0,
         duration:1.5,
         // ease:"bounce.out"
     })
 
     .from(".btnWrapper", {
+        opacity:0
+    })
+
+    .from(".template", {
         opacity:0
     })
 
